@@ -9,6 +9,8 @@ class Query:
 
 def read_queries():
     n = int(input())
+    if n < 1 or n > 100000:
+        print("wrong input")
     return [Query(input().split()) for i in range(n)]
 
 def write_responses(result):
